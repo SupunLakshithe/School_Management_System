@@ -1,8 +1,8 @@
 # esoft_final_project
-## This is the final project made for esoft diploma
+## This is the final project made for esoft IT-diploma
 # A student registration app for a school
 
-* A c# project
+* A C# project
 * A windows form app
 
 there are 6 forms in application
