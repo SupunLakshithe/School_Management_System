@@ -5,7 +5,7 @@
 *A c# project
 *A windows form app
 
-there are 4 forms in application
+there are 6 forms in application
 1.login form - landing form
 2.home form
 3.student register form
