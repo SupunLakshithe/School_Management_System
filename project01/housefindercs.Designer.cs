@@ -55,6 +55,7 @@
             this.cmbox_regno.Name = "cmbox_regno";
             this.cmbox_regno.Size = new System.Drawing.Size(121, 23);
             this.cmbox_regno.TabIndex = 2;
+            this.cmbox_regno.SelectedIndexChanged += new System.EventHandler(this.cmbox_regno_SelectedIndexChanged);
             // 
             // btn_find
             // 
@@ -120,6 +121,7 @@
             this.Controls.Add(this.cmbox_regno);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frm_housefinder";
             this.Text = "House Finder";
             this.Load += new System.EventHandler(this.frm_housefinder_Load);

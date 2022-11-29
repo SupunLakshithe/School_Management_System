@@ -46,7 +46,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::project01.Properties.Resources.WhatsApp_Image_2022_10_10_at_10_15_48_AM__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(146, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(109, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(137, 84);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -57,7 +57,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(93, 108);
+            this.label1.Location = new System.Drawing.Point(56, 99);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(249, 40);
             this.label1.TabIndex = 1;
@@ -71,7 +71,7 @@
             this.groupBox1.Controls.Add(this.txt_usename);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(76, 176);
+            this.groupBox1.Location = new System.Drawing.Point(38, 151);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(294, 159);
             this.groupBox1.TabIndex = 2;
@@ -105,7 +105,7 @@
             this.txt_password.PasswordChar = '*';
             this.txt_password.Size = new System.Drawing.Size(161, 23);
             this.txt_password.TabIndex = 3;
-            this.txt_password.Enter += new System.EventHandler(this.txt_password_Enter);
+            this.txt_password.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_password_KeyPress);
             // 
             // txt_usename
             // 
@@ -113,7 +113,7 @@
             this.txt_usename.Name = "txt_usename";
             this.txt_usename.Size = new System.Drawing.Size(161, 23);
             this.txt_usename.TabIndex = 2;
-            this.txt_usename.TextChanged += new System.EventHandler(this.txt_usename_TextChanged);
+            this.txt_usename.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_usename_KeyPress);
             // 
             // label3
             // 
@@ -137,7 +137,7 @@
             // 
             // btn_exit
             // 
-            this.btn_exit.Location = new System.Drawing.Point(12, 369);
+            this.btn_exit.Location = new System.Drawing.Point(3, 326);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(75, 23);
             this.btn_exit.TabIndex = 3;
@@ -149,16 +149,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(449, 404);
+            this.ClientSize = new System.Drawing.Size(370, 351);
             this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frm_login";
             this.Text = "Login - Skills International";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frm_login_FormClosed);
-            this.Load += new System.EventHandler(this.frm_login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

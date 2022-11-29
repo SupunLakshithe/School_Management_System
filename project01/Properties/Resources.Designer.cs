@@ -63,9 +63,19 @@ namespace project01.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap skills_international__ogo1_200x100 {
+        internal static System.Drawing.Bitmap logout_icon_vector_13489977 {
             get {
-                object obj = ResourceManager.GetObject("skills international._ogo1-200x100", resourceCulture);
+                object obj = ResourceManager.GetObject("logout-icon-vector-13489977", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pexels_aaditya_arora_592753 {
+            get {
+                object obj = ResourceManager.GetObject("pexels-aaditya-arora-592753", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -76,6 +86,26 @@ namespace project01.Properties {
         internal static System.Drawing.Bitmap WhatsApp_Image_2022_10_10_at_10_15_48_AM__1_ {
             get {
                 object obj = ResourceManager.GetObject("WhatsApp Image 2022-10-10 at 10.15.48 AM (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wp1954191_school_wallpapers {
+            get {
+                object obj = ResourceManager.GetObject("wp1954191-school-wallpapers", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wp1954191_school_wallpapers_done {
+            get {
+                object obj = ResourceManager.GetObject("wp1954191-school-wallpapers_done", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

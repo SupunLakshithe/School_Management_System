@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Runtime.Intrinsics.Arm;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,49 +19,13 @@ namespace project01
             InitializeComponent();
         }
 
-       
-        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void tabPage2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void splitContainer1_SplitterMoved(object sender, SplitterEventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_logout_Click(object sender, EventArgs e)
+        private    void btn_logout_Click(object sender, EventArgs e)
         {
             frm_login  frm_Login = new frm_login();
             DialogResult dialogResult = MessageBox.Show ("Are you sure, Do you want to logout?", "Logout",MessageBoxButtons.YesNo ,MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
-                this.Close(); 
+                this.Close();
                 frm_Login.Show();
             }
             
@@ -75,8 +40,8 @@ namespace project01
 
         private void btn_TeachRegister_Click(object sender, EventArgs e)
         {
-            teacher_register teacher_Register = new teacher_register(); 
-            this.Close ();
+            teacher_register teacher_Register = new teacher_register();
+            this.Close();
             teacher_Register.Show();
         }
 
@@ -108,14 +73,22 @@ namespace project01
             login.Show();
         }
 
-        private void txt_username_TextChanged(object sender, EventArgs e)
+        private void lnklbl_aboutus_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            info info = new info();
+            info.Show();
+        }
 
+        private void btn_club_Click(object sender, EventArgs e)
+        {
+            clubform clubform = new clubform();
+            this.Close();
+            clubform.Show();
         }
 
         private void home_Load(object sender, EventArgs e)
         {
-            frm_login frm_Login = new frm_login ();
+
         }
     }
 }

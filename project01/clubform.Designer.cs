@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(clubform));
-            this.chbox_videogame = new System.Windows.Forms.GroupBox();
+            this.game_grpbox = new System.Windows.Forms.GroupBox();
+            this.btn_clear = new System.Windows.Forms.Button();
+            this.btn_delete = new System.Windows.Forms.Button();
             this.btn_register = new System.Windows.Forms.Button();
             this.btn_update = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,48 +42,72 @@
             this.chbox_gaming = new System.Windows.Forms.CheckBox();
             this.chbox_chess = new System.Windows.Forms.CheckBox();
             this.chbox_photography = new System.Windows.Forms.CheckBox();
-            this.linklbl_logout = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
             this.linklbl_exit = new System.Windows.Forms.LinkLabel();
-            this.chbox_videogame.SuspendLayout();
+            this.linklbl_logout = new System.Windows.Forms.LinkLabel();
+            this.game_grpbox.SuspendLayout();
             this.SuspendLayout();
             // 
-            // chbox_videogame
+            // game_grpbox
             // 
-            this.chbox_videogame.Controls.Add(this.btn_register);
-            this.chbox_videogame.Controls.Add(this.btn_update);
-            this.chbox_videogame.Controls.Add(this.label1);
-            this.chbox_videogame.Controls.Add(this.chbox_astro);
-            this.chbox_videogame.Controls.Add(this.chbox_cooking);
-            this.chbox_videogame.Controls.Add(this.cmbox_regno);
-            this.chbox_videogame.Controls.Add(this.chbox_frlanguage);
-            this.chbox_videogame.Controls.Add(this.chbox_gaming);
-            this.chbox_videogame.Controls.Add(this.chbox_chess);
-            this.chbox_videogame.Controls.Add(this.chbox_photography);
-            this.chbox_videogame.Location = new System.Drawing.Point(12, 58);
-            this.chbox_videogame.Name = "chbox_videogame";
-            this.chbox_videogame.Size = new System.Drawing.Size(319, 271);
-            this.chbox_videogame.TabIndex = 0;
-            this.chbox_videogame.TabStop = false;
-            this.chbox_videogame.Text = "Scool Clubs";
+            this.game_grpbox.Controls.Add(this.btn_clear);
+            this.game_grpbox.Controls.Add(this.btn_delete);
+            this.game_grpbox.Controls.Add(this.btn_register);
+            this.game_grpbox.Controls.Add(this.btn_update);
+            this.game_grpbox.Controls.Add(this.label1);
+            this.game_grpbox.Controls.Add(this.chbox_astro);
+            this.game_grpbox.Controls.Add(this.chbox_cooking);
+            this.game_grpbox.Controls.Add(this.cmbox_regno);
+            this.game_grpbox.Controls.Add(this.chbox_frlanguage);
+            this.game_grpbox.Controls.Add(this.chbox_gaming);
+            this.game_grpbox.Controls.Add(this.chbox_chess);
+            this.game_grpbox.Controls.Add(this.chbox_photography);
+            this.game_grpbox.Location = new System.Drawing.Point(12, 58);
+            this.game_grpbox.Name = "game_grpbox";
+            this.game_grpbox.Size = new System.Drawing.Size(319, 271);
+            this.game_grpbox.TabIndex = 0;
+            this.game_grpbox.TabStop = false;
+            this.game_grpbox.Text = "Scool Clubs";
+            // 
+            // btn_clear
+            // 
+            this.btn_clear.Location = new System.Drawing.Point(189, 242);
+            this.btn_clear.Name = "btn_clear";
+            this.btn_clear.Size = new System.Drawing.Size(54, 23);
+            this.btn_clear.TabIndex = 9;
+            this.btn_clear.Text = "Clear";
+            this.btn_clear.UseVisualStyleBackColor = true;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
+            // 
+            // btn_delete
+            // 
+            this.btn_delete.Location = new System.Drawing.Point(249, 242);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(64, 23);
+            this.btn_delete.TabIndex = 8;
+            this.btn_delete.Text = "Delete";
+            this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // btn_register
             // 
-            this.btn_register.Location = new System.Drawing.Point(238, 242);
+            this.btn_register.Location = new System.Drawing.Point(6, 242);
             this.btn_register.Name = "btn_register";
-            this.btn_register.Size = new System.Drawing.Size(75, 23);
+            this.btn_register.Size = new System.Drawing.Size(62, 23);
             this.btn_register.TabIndex = 7;
             this.btn_register.Text = "Register";
             this.btn_register.UseVisualStyleBackColor = true;
+            this.btn_register.Click += new System.EventHandler(this.btn_register_Click_1);
             // 
             // btn_update
             // 
-            this.btn_update.Location = new System.Drawing.Point(6, 242);
+            this.btn_update.Location = new System.Drawing.Point(74, 242);
             this.btn_update.Name = "btn_update";
-            this.btn_update.Size = new System.Drawing.Size(75, 23);
+            this.btn_update.Size = new System.Drawing.Size(65, 23);
             this.btn_update.TabIndex = 6;
             this.btn_update.Text = "Update";
             this.btn_update.UseVisualStyleBackColor = true;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
             // label1
             // 
@@ -119,6 +145,7 @@
             this.cmbox_regno.Name = "cmbox_regno";
             this.cmbox_regno.Size = new System.Drawing.Size(121, 23);
             this.cmbox_regno.TabIndex = 0;
+            this.cmbox_regno.SelectedIndexChanged += new System.EventHandler(this.cmbox_regno_SelectedIndexChanged);
             // 
             // chbox_frlanguage
             // 
@@ -160,17 +187,6 @@
             this.chbox_photography.Text = "Photography Club";
             this.chbox_photography.UseVisualStyleBackColor = true;
             // 
-            // linklbl_logout
-            // 
-            this.linklbl_logout.AutoSize = true;
-            this.linklbl_logout.Location = new System.Drawing.Point(12, 9);
-            this.linklbl_logout.Name = "linklbl_logout";
-            this.linklbl_logout.Size = new System.Drawing.Size(45, 15);
-            this.linklbl_logout.TabIndex = 1;
-            this.linklbl_logout.TabStop = true;
-            this.linklbl_logout.Text = "Logout";
-            this.linklbl_logout.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklbl_logout_LinkClicked);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -190,22 +206,35 @@
             this.linklbl_exit.TabIndex = 8;
             this.linklbl_exit.TabStop = true;
             this.linklbl_exit.Text = "Exit";
+            this.linklbl_exit.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklbl_exit_LinkClicked);
+            // 
+            // linklbl_logout
+            // 
+            this.linklbl_logout.AutoSize = true;
+            this.linklbl_logout.Location = new System.Drawing.Point(12, 9);
+            this.linklbl_logout.Name = "linklbl_logout";
+            this.linklbl_logout.Size = new System.Drawing.Size(45, 15);
+            this.linklbl_logout.TabIndex = 9;
+            this.linklbl_logout.TabStop = true;
+            this.linklbl_logout.Text = "Logout";
+            this.linklbl_logout.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklbl_logout_LinkClicked_1);
             // 
             // clubform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(343, 351);
+            this.ControlBox = false;
+            this.Controls.Add(this.linklbl_logout);
             this.Controls.Add(this.linklbl_exit);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.linklbl_logout);
-            this.Controls.Add(this.chbox_videogame);
+            this.Controls.Add(this.game_grpbox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "clubform";
             this.Text = "Club registration - Skills International";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.clubform_FormClosed);
-            this.chbox_videogame.ResumeLayout(false);
-            this.chbox_videogame.PerformLayout();
+            this.Load += new System.EventHandler(this.clubform_Load);
+            this.game_grpbox.ResumeLayout(false);
+            this.game_grpbox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,7 +242,7 @@
 
         #endregion
 
-        private GroupBox chbox_videogame;
+        private GroupBox game_grpbox;
         private Button btn_register;
         private Button btn_update;
         private Label label1;
@@ -224,8 +253,10 @@
         private CheckBox chbox_gaming;
         private CheckBox chbox_chess;
         private CheckBox chbox_photography;
-        private LinkLabel linklbl_logout;
         private Label label2;
         private LinkLabel linklbl_exit;
+        private Button btn_clear;
+        private Button btn_delete;
+        private LinkLabel linklbl_logout;
     }
 }

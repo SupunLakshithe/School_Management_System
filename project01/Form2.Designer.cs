@@ -80,6 +80,7 @@
             this.linklbl_logout.TabIndex = 0;
             this.linklbl_logout.TabStop = true;
             this.linklbl_logout.Text = "Logout";
+            this.linklbl_logout.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklbl_logout_LinkClicked);
             // 
             // linklbl_exit
             // 
@@ -101,7 +102,6 @@
             this.label1.Size = new System.Drawing.Size(228, 32);
             this.label1.TabIndex = 2;
             this.label1.Text = "Skills International";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // grp_basic
             // 
@@ -150,6 +150,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(215, 23);
             this.dateTimePicker1.TabIndex = 6;
+            this.dateTimePicker1.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             // 
             // txt_secondname
             // 
@@ -157,6 +158,7 @@
             this.txt_secondname.Name = "txt_secondname";
             this.txt_secondname.Size = new System.Drawing.Size(341, 23);
             this.txt_secondname.TabIndex = 5;
+            this.txt_secondname.TextChanged += new System.EventHandler(this.txt_secondname_TextChanged);
             // 
             // txt_firstname
             // 
@@ -200,7 +202,6 @@
             this.label2.Size = new System.Drawing.Size(64, 15);
             this.label2.TabIndex = 0;
             this.label2.Text = "First Name";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // grp_parent
             // 
@@ -357,6 +358,7 @@
             this.btn_register.TabIndex = 6;
             this.btn_register.Text = "Register";
             this.btn_register.UseVisualStyleBackColor = true;
+            this.btn_register.Click += new System.EventHandler(this.btn_register_Click);
             // 
             // btn_update
             // 
@@ -366,6 +368,7 @@
             this.btn_update.TabIndex = 7;
             this.btn_update.Text = "Update";
             this.btn_update.UseVisualStyleBackColor = true;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
             // btn_clear
             // 
@@ -375,6 +378,7 @@
             this.btn_clear.TabIndex = 8;
             this.btn_clear.Text = "Clear";
             this.btn_clear.UseVisualStyleBackColor = true;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // btn_delete
             // 
@@ -384,6 +388,7 @@
             this.btn_delete.TabIndex = 9;
             this.btn_delete.Text = "Delete";
             this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // groupBox1
             // 
@@ -405,11 +410,13 @@
             // 
             // cmbox_regno
             // 
+            this.cmbox_regno.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.cmbox_regno.FormattingEnabled = true;
             this.cmbox_regno.Location = new System.Drawing.Point(145, 29);
             this.cmbox_regno.Name = "cmbox_regno";
             this.cmbox_regno.Size = new System.Drawing.Size(121, 23);
             this.cmbox_regno.TabIndex = 11;
+            this.cmbox_regno.SelectedIndexChanged += new System.EventHandler(this.cmbox_regno_SelectedIndexChanged);
             // 
             // label13
             // 
@@ -425,6 +432,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(552, 769);
+            this.ControlBox = false;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.linklbl_exit);
             this.Controls.Add(this.linklbl_logout);
@@ -433,6 +441,7 @@
             this.Name = "student_register";
             this.Text = "Student Registration - Skills International";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.student_register_FormClosed);
+            this.Load += new System.EventHandler(this.student_register_Load);
             this.grp_basic.ResumeLayout(false);
             this.grp_basic.PerformLayout();
             this.grp_parent.ResumeLayout(false);
