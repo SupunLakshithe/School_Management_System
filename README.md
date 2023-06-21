@@ -1,4 +1,4 @@
-# esoft_final_project
+# A School Management System
 ## This is the final project made for esoft IT-diploma
 # A student registration app for a school
 
